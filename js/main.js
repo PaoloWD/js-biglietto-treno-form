@@ -7,6 +7,7 @@ const submitBtn = document.querySelector(".btn-outline-primary");
 const ticketPrice = (distanceEl * 0.21).toFixed(2);
 const subDistance = document.querySelector("span.distance");
 const subName = document.querySelector("span.full-name");
+const subSale = document.querySelector("span.sale");
 
 console.log(fullNameEl);
 console.log(distanceEl);
@@ -15,13 +16,17 @@ console.log(ticketPriceSale);
 console.log(submitBtn);
 
 submitBtn.addEventListener("click", function () {
-  const fullName = document.querySelector(".full-name");
   subName.innerHTML = fullNameEl.value;
   console.log(fullNameEl.value);
 
-  const distance = document.querySelector(".distance");
   subDistance.innerHTML = distanceEl.value;
   console.log(distanceEl.value);
 
-  const 
+  if (saleEl.value === 20) {
+    ticketPrice = ticketPrice * 0.8;
+    subSale.innerHTML = ticketPriceSale.value;
+  }
+  if (saleEl.value === 40) {
+    ticketPrice = ticketPrice * 0.6;
+  }
 });
