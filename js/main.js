@@ -1,4 +1,5 @@
 const submitBtn = document.querySelector(".btn-outline-primary");
+const resetBtn = document.querySelector(".btn-outline-danger");
 function show() {
   document.getElementById("show").style.display = "block";
 }
