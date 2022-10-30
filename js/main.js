@@ -1,4 +1,7 @@
 const submitBtn = document.querySelector(".btn-outline-primary");
+function show() {
+  document.getElementById("show").style.display = "block";
+}
 
 submitBtn.addEventListener("click", function () {
   const fullNameEl = document.querySelector(".full-name");
@@ -6,8 +9,8 @@ submitBtn.addEventListener("click", function () {
   const distanceCost = parseInt(distanceEl.value);
   const saleEl = document.querySelector(".sale");
   const offert = document.querySelector(".offert");
-  let randomNum = document.querySelector("span.random");
-  let randomCarriage = document.querySelector("span.carriage");
+  const randomNum = document.querySelector("span.random");
+  const randomCarriage = document.querySelector("span.carriage");
 
   let ticketPrice = distanceCost * 0.21;
   const subName = document.querySelector("span.full-name");
@@ -26,9 +29,9 @@ submitBtn.addEventListener("click", function () {
     offert.innerHTML = `0%`;
   }
 
-  let max10 = Math.ceil(Math.random() * 5);
+  const max10 = Math.ceil(Math.random() * 5);
   randomNum.innerHTML = max10;
 
-  let max100000 = Math.ceil(Math.random() * 100000);
+  const max100000 = Math.ceil(Math.random() * 100000);
   randomCarriage.innerHTML = max100000;
 });
