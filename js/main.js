@@ -6,6 +6,9 @@ submitBtn.addEventListener("click", function () {
   const distanceCost = parseInt(distanceEl.value);
   const saleEl = document.querySelector(".sale");
   const offert = document.querySelector(".offert");
+  let randomNum = document.querySelector("span.random");
+  let randomCarriage = document.querySelector("span.carriage");
+
   let ticketPrice = distanceCost * 0.21;
   const subDistance = document.querySelector("span.distance");
   const subName = document.querySelector("span.full-name");
@@ -24,4 +27,10 @@ submitBtn.addEventListener("click", function () {
     subSale.innerHTML = ticketPrice.toFixed(2);
     offert.innerHTML = `Non hai diritto a nessun sconto`;
   }
+
+  let max10 = Math.ceil(Math.random() * 5);
+  randomNum.innerHTML = max10;
+
+  let max100000 = Math.ceil(Math.random() * 100000);
+  randomCarriage.innerHTML = max100000;
 });
