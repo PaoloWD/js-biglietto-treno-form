@@ -23,7 +23,7 @@ submitBtn.addEventListener("click", function () {
     offert.innerHTML = `40%`;
   } else {
     subSale.innerHTML = ticketPrice.toFixed(2);
-    offert.innerHTML = `Non hai diritto a nessun sconto`;
+    offert.innerHTML = `0%`;
   }
 
   let max10 = Math.ceil(Math.random() * 5);
