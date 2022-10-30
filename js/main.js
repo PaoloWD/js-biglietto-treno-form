@@ -10,11 +10,9 @@ submitBtn.addEventListener("click", function () {
   let randomCarriage = document.querySelector("span.carriage");
 
   let ticketPrice = distanceCost * 0.21;
-  const subDistance = document.querySelector("span.distance");
   const subName = document.querySelector("span.full-name");
   const subSale = document.querySelector("span.sale");
   subName.innerHTML = fullNameEl.value;
-  subDistance.innerHTML = distanceEl.value;
   if (saleEl.value === "20") {
     ticketPrice = ticketPrice * 0.8;
     subSale.innerHTML = ticketPrice.toFixed(2);
