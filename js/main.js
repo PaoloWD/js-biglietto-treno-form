@@ -1,8 +1,16 @@
 const submitBtn = document.querySelector(".btn-outline-primary");
 const resetBtn = document.querySelector(".btn-outline-danger");
+const inputs = document.querySelectorAll("input");
+const options = document.querySelectorAll("option");
 function show() {
   document.getElementById("show").style.display = "block";
 }
+
+resetBtn.addEventListener("click", () => {
+  inputs.forEach((input) => (input.value = ""));
+  document.getElementById("show").style.display = "none";
+  document.querySelector(".sale").value = "0";
+});
 
 submitBtn.addEventListener("click", function () {
   const fullNameEl = document.querySelector(".full-name");
