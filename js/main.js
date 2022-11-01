@@ -20,7 +20,6 @@ submitBtn.addEventListener("click", function () {
   const offert = document.querySelector(".offert");
   const randomNum = document.querySelector("span.random");
   const randomCarriage = document.querySelector("span.carriage");
-  console.log(distanceEl.value);
   if (distanceEl.value == "" || fullNameEl.value == "") {
     alert("Compila tutti i campi");
   } else {
