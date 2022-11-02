@@ -6,12 +6,6 @@ function show() {
   document.getElementById("show").style.display = "block";
 }
 
-resetBtn.addEventListener("click", () => {
-  inputs.forEach((input) => (input.value = ""));
-  document.getElementById("show").style.display = "none";
-  document.querySelector(".sale").value = "0";
-});
-
 submitBtn.addEventListener("click", function () {
   const fullNameEl = document.querySelector(".full-name");
   const distanceEl = document.querySelector(".distance");
@@ -47,4 +41,16 @@ submitBtn.addEventListener("click", function () {
     const max100000 = Math.ceil(Math.random() * 100000);
     randomCarriage.innerHTML = max100000;
   }
+});
+
+resetBtn.addEventListener("click", function () {
+  document.getElementById("show").style.display = "none";
+  document.querySelector(".sale").value = "0";
+  document.querySelector(".distance").value = "";
+  document.querySelector(".full-name").value = "";
+  document.querySelector("span.full-name").innerHTML = "";
+  document.querySelector(".random").innerHTML = "";
+  document.querySelector(".carriage").innerHTML = "";
+  document.querySelector("span.sale").innerHTML = "";
+  document.querySelector(".offert").innerHTML = "";
 });
